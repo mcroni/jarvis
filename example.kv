@@ -1,0 +1,114 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import kivy kivy
+<FBut@Button>:
+    font_size: 100
+    font_name: 'modernpics'
+
+
+
+<AndroidTabs>:
+    tab_indicator_height: '2dp'
+    anim_threshold: 0
+    MyTab:
+
+
+        orientation: 'horizontal'
+        cols: 2
+        spacing: 5
+        text: 'BUDGET'
+        FBut:
+            text: 'i'
+            on_release: app.open_settings()
+
+
+        FBut:
+            text: 'j'
+        FBut:
+            text: 'E'
+            font_size: 100
+
+        FBut:
+            text: '1'
+            font_size: 100
+            font_name: 'heydings'
+        FBut:
+            text: 'A'
+            font_size: 100
+            font_name: 'heydings'
+        FBut:
+            text: 'N'
+            font_size: 100
+
+
+
+
+    MyTabb:
+        id: thoughts
+        text: 'THOUGHTS'
+
+
+
+        TextInput:
+            id: login_text
+            #text: ''
+            hint_text: "Login"
+            size_hint: .7,.1
+            pos_hint: {'center_x':.5, 'center_y': .78}
+            font_color: 1,2,0,1
+            multiline: False
+
+
+        TextInput:
+            id: pass_text
+            #text: ''
+            hint_text: "Password"
+            size_hint: .7,.1
+            pos_hint: {'center_x':.5, 'center_y': .65}
+            font_color: 1,2,0,1
+            multiline: False
+            password: True
+        Button:
+            text: 'BUDGET'
+            size_hint: .5,.1
+            pos_hint: {'center_x':.5, 'center_y': .45}
+            background_down: 'button_down.png'
+            #background_normal: 'button_hovered.png'
+
+        FloatingAction:
+            icon: 'done-32.png'
+            diameter: 70
+            shadow_offset_x: 5
+            pos_hint: {'center_x':.9, 'center_y': .15}
+            size_hint:.3,.3
+            on_release: app.root.current = 'stats'
+
+
+    MyTabbb:
+        text: 'PLANS'
+
+        FloatingAction:
+            icon: 'done-32.png'
+            diameter: 70
+            shadow_offset_x: 5
+            pos_hint: {'center_x':.9, 'center_y': .15}
+            size_hint:.3,.3
+            on_release: app.root.current = 'stats'
+
+
+
+MyScreenManager:
+    transition: FadeTransition()
+    ShoppingScreen:
+    DonationScreen:
+    WindowScreen:
+    StatsScreen:
+    CreditScreen:
+    MiscScreen:
+
+<ShoppingScreen>:
+    name: 'shop'
+    Button:
+        text: 'shoppinh'
+
+<StatsScreen>:
+    name: 'stats'
