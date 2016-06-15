@@ -10,7 +10,6 @@ from kivy.uix.behaviors import ButtonBehavior
 from kivy.metrics import dp
 from material.flatui.flatui import FloatingAction, RaisedButton, _MaterialButton
 from garden import *
-from sqlalchemy import *
 from kivy.core.text import LabelBase
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
